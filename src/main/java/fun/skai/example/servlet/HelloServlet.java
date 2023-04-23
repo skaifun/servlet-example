@@ -1,17 +1,14 @@
 package fun.skai.example.servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import jakarta.servlet.annotation.WebInitParam;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@WebServlet(name = "helloServlet", value = "/", initParams = @WebInitParam(name = "defaultName", value = "world"))
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class HelloServlet extends HttpServlet {
     private static final Logger log = LoggerFactory.getLogger(HelloServlet.class);
     private String defaultName;
